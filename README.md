@@ -1,4 +1,4 @@
-# PASSPORT AUTOMATION SYSTEM
+# Passport Automation System
 
 *Developed using HTML, CSS, jQuery and PHP*
 
