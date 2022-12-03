@@ -4,11 +4,11 @@
 
 ## Table of Contents
 
-[Introduction](https://github.com/cfts-mkb/pas#introduction)
-[Scope](https://github.com/cfts-mkb/pas#scope)
-[Use Cases Implemented](https://github.com/cfts-mkb/pas#use-cases-implemented)
-[Actors Involved](https://github.com/cfts-mkb/pas#actors-involved)
-[Technologies Used](https://github.com/cfts-mkb/pas#technologies-used)
+1. [Introduction](https://github.com/cfts-mkb/pas#introduction)
+2. [Scope](https://github.com/cfts-mkb/pas#scope)
+3. [Use Cases Implemented](https://github.com/cfts-mkb/pas#use-cases-implemented)
+4. [Actors Involved](https://github.com/cfts-mkb/pas#actors-involved)
+5. [Technologies Used](https://github.com/cfts-mkb/pas#technologies-used)
 
 ## Introduction
 
