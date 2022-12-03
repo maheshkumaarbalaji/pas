@@ -1,6 +1,6 @@
 # Passport Automation System
 
-*Web application developed using HTML, CSS, jQuery and PHP*
+*Web application developed using HTML, CSS, Javascript, PHP and MySQL*
 
 ## Table of Contents
 
@@ -9,6 +9,7 @@
 3. [Use Cases Implemented](https://github.com/cfts-mkb/pas#use-cases-implemented)
 4. [Actors Involved](https://github.com/cfts-mkb/pas#actors-involved)
 5. [Technologies Used](https://github.com/cfts-mkb/pas#technologies-used)
+6. [Tools Used](https://github.com/cfts-mkb/pas#tools-used)
 
 ## Introduction
 
@@ -55,3 +56,8 @@ Passport Automation System is used in the effective dispatch of passport to all 
 - Wamp Server
 - Hypertext Preprocessor (PHP)
 - MySQL
+
+## Tools Used
+
+- Visual Studio Code
+- MySQL Workbench
