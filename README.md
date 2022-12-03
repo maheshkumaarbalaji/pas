@@ -1,6 +1,6 @@
 # Passport Automation System
 
-*Developed using HTML, CSS, jQuery and PHP*
+*Web application developed using HTML, CSS, jQuery and PHP*
 
 ## Table of Contents
 
