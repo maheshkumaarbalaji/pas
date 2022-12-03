@@ -44,6 +44,8 @@ Passport Automation System is used in the effective dispatch of passport to all 
   
 - Police
   They are responsible for performing a personal verification of the applicant and see if they have any criminal case against them before or at present. In this case, the police have been assigned with the power to decline an application by suggesting it to the Administrator. The communicate with the other actors via the Passport Automation System.
+  
+ ![Use Case Diagram](/images/Use-Case-Diagram.jpg)
 
 ## Technologies Used
 
