@@ -2,7 +2,7 @@
 
 *Web application developed using HTML, CSS, Javascript, PHP and MySQL*
 
-**Website** - [Passport Automation System](http://passport-automation-system.cfts-mkb.com)
+**Website** - [Passport Automation System](https://cfts-mkb-pas.000webhostapp.com)
 
 ## Table of Contents
 
