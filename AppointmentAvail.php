@@ -69,8 +69,7 @@
 		  <div class="form_settings">
             <h2>Appointment Date Availability</h2>
             <?php
-			$database="PAS";
-			$con = mysqli_connect("localhost","root" ,"",$database);
+			$con=mysqli_connect("localhost",$_SERVER['DB_USER'],$_SERVER['DB_PWD'],$_SERVER['DB_NAME']);
 			if (!$con)
 			{
 				die('Could not connect: ' . mysql_error());
@@ -117,10 +116,5 @@
           </div><!--close form_settings-->
 		</div><!--close content_item-->
       </div><!--close content-->   
-
-	  
-  
-    	
-  
 </body>
 </html>

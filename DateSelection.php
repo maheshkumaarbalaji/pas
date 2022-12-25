@@ -70,8 +70,7 @@
             <h2>Appointment Date </h2>
             <?php
 			session_start();
-	$database="PAS"; 
-	$con = mysqli_connect("localhost","root" ,"",$database);
+			$con=mysqli_connect("localhost",$_SERVER['DB_USER'],$_SERVER['DB_PWD'],$_SERVER['DB_NAME']);
     if (!$con)
     {
     die('Could not connect: ' . mysql_error());

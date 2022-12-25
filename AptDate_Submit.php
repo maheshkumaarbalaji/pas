@@ -68,11 +68,10 @@
             <h2>Update Availability of Dates for Police Verification </h2>
            <?php
 
-$database="PAS"; 
 $Date=$_POST['Date'];
 $Availability=$_POST['Availability'];
 
-    $con = mysqli_connect("localhost","root" ,"",$database);
+$con=mysqli_connect("localhost",$_SERVER['DB_USER'],$_SERVER['DB_PWD'],$_SERVER['DB_NAME']);
     if (!$con)
     {
     die('Could not connect: ' . mysql_error());

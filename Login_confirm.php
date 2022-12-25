@@ -26,7 +26,7 @@
 	  </div><!--close welcome-->
       <div id="menu_items">
 	    <ul id="menu">
-          <li><a href="Home.html">Home</a></li>
+          <li><a href="index.html">Home</a></li>
 		  <li><a href="Register.html">Register</a></li>
           <li class="current"><a href="Login.html">Login</a></li>
         </ul>
@@ -67,11 +67,10 @@
             <h2>Login</h2>
             <?php
 			session_start();
-$database="PAS"; 
 $id=$_POST['userID'];
 $pd=$_POST['pwd'];
 
-    $con = mysqli_connect("localhost","root" ,"",$database);
+$con=mysqli_connect("localhost",$_SERVER['DB_USER'],$_SERVER['DB_PWD'],$_SERVER['DB_NAME']);
     if (!$con)
     {
     die('Could not connect: ' . mysql_error());

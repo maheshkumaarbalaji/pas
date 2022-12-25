@@ -66,8 +66,7 @@
 		  <div class="form_settings">
             <h1>Validate Application</h1>
            <?php
-			$database="PAS";
-			$con=mysqli_connect("localhost","root","",$database);
+			$con=mysqli_connect("localhost",$_SERVER['DB_USER'],$_SERVER['DB_PWD'],$_SERVER['DB_NAME']);
 			if(!$con)
 			{
 				die('Could not connect:' . mysql_error());

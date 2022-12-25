@@ -70,7 +70,6 @@
             <h2>Fill Application</h2>
             <?php
 			session_start();
-$database="PAS"; 
 $Name=$_POST['Name'];
 $FatherName=$_POST['FatherName'];
 $DateofBirth=$_POST['DateofBirth'];
@@ -82,7 +81,7 @@ $PANNO=$_POST['PANNO'];
 $ApplicationNo=rand(0,10000);
 $UserID=$_SESSION['userID'];
 
-    $con = mysqli_connect("localhost","root" ,"",$database);
+$con=mysqli_connect("localhost",$_SERVER['DB_USER'],$_SERVER['DB_PWD'],$_SERVER['DB_NAME']);
     if (!$con)
     {
     die('Could not connect: ' . mysql_error());
@@ -103,10 +102,5 @@ mysqli_close($con);
           </div><!--close form_settings-->
 		</div><!--close content_item-->
       </div><!--close content-->   
-
-	  
-  
-    	
-  
 </body>
 </html>

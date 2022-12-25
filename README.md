@@ -2,6 +2,8 @@
 
 *Web application developed using HTML, CSS, Javascript, PHP and MySQL*
 
+**Website** - [Passport Automation System](http://passport-automation-system.cfts-mkb.com)
+
 ## Table of Contents
 
 1. [Introduction](https://github.com/cfts-mkb/pas#introduction)
@@ -34,16 +36,16 @@ Passport Automation System is used in the effective dispatch of passport to all 
 
 ## Actors Involved
 
-- Applicant
+- **Applicant**
   Refers to the user who wishes to apply for a passport and submits an application in the system.
   
-- Passport Officer
+- **Passport Officer**
   They are responsible for ensuring all required document have been submitted by the applicant and if the details entered by the user match the details already available in the system. Once an application is validated successfully, they forward it to the regional administrator for manual verification. He ha
   
-- Regional Administrator
+- **Regional Administrator**
   They are responsible for verifying the details submitted by the applicant and confirm if the application can be approved for manual verification. 
   
-- Police
+- **Police**
   They are responsible for performing a personal verification of the applicant and see if they have any criminal case against them before or at present. In this case, the police have been assigned with the power to decline an application by suggesting it to the Administrator. The communicate with the other actors via the Passport Automation System.
   
  ![Use Case Diagram](/images/Use-Case-Diagram.jpg)
@@ -53,7 +55,7 @@ Passport Automation System is used in the effective dispatch of passport to all 
 - Hyper Text Markup Language (HTML)
 - Cascaded Stylesheets (CSS)
 - Javascript
-- Wamp Server
+- Apache Server
 - Hypertext Preprocessor (PHP)
 - MySQL
 
@@ -61,3 +63,4 @@ Passport Automation System is used in the effective dispatch of passport to all 
 
 - Visual Studio Code
 - MySQL Workbench
+- PhpMyAdmin
