@@ -81,14 +81,14 @@ $PANNO=$_POST['PANNO'];
 $ApplicationNo=rand(0,10000);
 $UserID=$_SESSION['userID'];
 
-$con=mysqli_connect("localhost",$_SERVER['DB_USER'],$_SERVER['DB_PWD'],$_SERVER['DB_NAME']);
+$con=mysqli_connect($_SERVER['DB_HOSTNAME'],$_SERVER['DB_USERNAME'],$_SERVER['DB_PASSWORD'],$_SERVER['DB_SCHEMA'],$_SERVER['PORT']);
     if (!$con)
     {
     die('Could not connect: ' . mysql_error());
     }
     
 
-$query = "INSERT INTO applicant (Name,FatherName,DateofBirth,PermanentAddress,TemporaryAddress,EMailID,PhoneNo,PANNO,ApplicationNo,UserID,Status)VALUES ('$Name','$FatherName','$DateofBirth','$PermanentAddress','$TemporaryAddress','$EMailID','$PhoneNo','$PANNO','$ApplicationNo','$UserID','A')";
+$query = "INSERT INTO applicant (Name,FatherName,DateOfBirth,PermanentAddress,TemporaryAddress,EmailAddress,PhoneNumber,PanNumber,ApplicationNumber,UserId,Status)VALUES ('$Name','$FatherName','$DateofBirth','$PermanentAddress','$TemporaryAddress','$EMailID','$PhoneNo','$PANNO','$ApplicationNo','$UserID','A')";
 mysqli_query($con,$query);
 
 echo "<script type='text/javascript'>\n";

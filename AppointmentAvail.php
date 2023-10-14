@@ -69,7 +69,7 @@
 		  <div class="form_settings">
             <h2>Appointment Date Availability</h2>
             <?php
-			$con=mysqli_connect("localhost",$_SERVER['DB_USER'],$_SERVER['DB_PWD'],$_SERVER['DB_NAME']);
+			$con=mysqli_connect($_SERVER['DB_HOSTNAME'],$_SERVER['DB_USERNAME'],$_SERVER['DB_PASSWORD'],$_SERVER['DB_SCHEMA'],$_SERVER['PORT']);
 			if (!$con)
 			{
 				die('Could not connect: ' . mysql_error());

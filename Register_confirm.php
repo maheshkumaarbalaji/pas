@@ -73,14 +73,14 @@ $email=$_POST['Email'];
 $id=$_POST['userID'];
 $pd=$_POST['pwd'];
 $_SESSION['userID']=$id;
-$con=mysqli_connect("localhost",$_SERVER['DB_USER'],$_SERVER['DB_PWD'],$_SERVER['DB_NAME']);
+$con=mysqli_connect($_SERVER['DB_HOSTNAME'],$_SERVER['DB_USERNAME'],$_SERVER['DB_PASSWORD'],$_SERVER['DB_SCHEMA'],$_SERVER['PORT']);
     if (!$con)
     {
     die('Could not connect: ' . mysql_error());
     }
     
 
-$query = "INSERT INTO login_details (Name,Designation,EMail,UserID,Pwd)VALUES ('$name','A','$email','$id','$pd')";
+$query = "INSERT INTO login_details (Name,Designation,Email,UserId,Password)VALUES ('$name','A','$email','$id','$pd')";
 mysqli_query($con,$query);
 
 echo "<script type='text/javascript'>\n";

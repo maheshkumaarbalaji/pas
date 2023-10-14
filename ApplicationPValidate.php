@@ -67,12 +67,12 @@
 		  <div class="form_settings">
 		  <h1>Validate Application</h1>
            <?php
-			$con=mysqli_connect("localhost",$_SERVER['DB_USER'],$_SERVER['DB_PWD'],$_SERVER['DB_NAME']);
+			$con=mysqli_connect($_SERVER['DB_HOSTNAME'],$_SERVER['DB_USERNAME'],$_SERVER['DB_PASSWORD'],$_SERVER['DB_SCHEMA'],$_SERVER['PORT']);
 			if(!$con)
 			{
 				die('Could not connect:' . mysql_error());
 			}
-			$query="SELECT ApplicationNo,Status FROM applicant WHERE Status='A' LIMIT 5;";
+			$query="SELECT ApplicationNumber,Status FROM applicant WHERE Status='A' LIMIT 5;";
 			$res=mysqli_query($con,$query);
 			if(mysqli_num_rows($res)==0)
 			{
@@ -86,7 +86,7 @@
 			echo "</tr>";
 			while($row=mysqli_fetch_array($res,MYSQL_ASSOC))
 			{
-				$first=$row['ApplicationNo'];
+				$first=$row['ApplicationNumber'];
 				$second=$row['Status'];
 				echo "<tr>";
 				echo "<td>" . $first . "</td>";

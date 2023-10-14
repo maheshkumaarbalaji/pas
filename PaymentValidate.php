@@ -72,13 +72,13 @@
             <h2>Online Payment</h2>
              <?php
 			session_start();
-			$con=mysqli_connect("localhost",$_SERVER['DB_USER'],$_SERVER['DB_PWD'],$_SERVER['DB_NAME']);
+			$con=mysqli_connect($_SERVER['DB_HOSTNAME'],$_SERVER['DB_USERNAME'],$_SERVER['DB_PASSWORD'],$_SERVER['DB_SCHEMA'],$_SERVER['PORT']);
     if (!$con)
     {
     die('Could not connect: ' . mysql_error());
     }
 	$id=$_SESSION['userID'];
-	$query="SELECT Status FROM applicant WHERE UserID='".$id."' LIMIT 2;";
+	$query="SELECT Status FROM applicant WHERE UserId='".$id."' LIMIT 2;";
 	$res=mysqli_query($con,$query);
 	$row=mysqli_fetch_array($res,MYSQL_ASSOC);
 	$Status=$row['Status'];

@@ -67,19 +67,19 @@
 		  <div class="form_settings">
 		  <h1>Passport Issue Process</h1>
           <?php
-			$con=mysqli_connect("localhost",$_SERVER['DB_USER'],$_SERVER['DB_PWD'],$_SERVER['DB_NAME']);
+			$con=mysqli_connect($_SERVER['DB_HOSTNAME'],$_SERVER['DB_USERNAME'],$_SERVER['DB_PASSWORD'],$_SERVER['DB_SCHEMA'],$_SERVER['PORT']);
 			if(!$con)
 			{
 				die('Could not connect:' . mysql_error());
 			}
 			$Appno=$_POST['ApplicationNo'];
-			$query="SELECT ApplicationNo,Status FROM payment WHERE Status='Success' LIMIT 5;";
+			$query="SELECT ApplicationNumber,Status FROM payment WHERE Status='Success' LIMIT 5;";
 			$res=mysqli_query($con,$query);
 			$count=0;
 			
 			while($row=mysqli_fetch_array($res,MYSQL_ASSOC))
 			{
-				$Dat=$row['ApplicationNo'];
+				$Dat=$row['ApplicationNumber'];
 				if($Dat==$Appno)
 				{
 					$count=1;
@@ -96,33 +96,33 @@
 			}
 			else
 			{
-				$query="UPDATE applicant SET Status='S' WHERE ApplicationNo='$Appno';";
+				$query="UPDATE applicant SET Status='S' WHERE ApplicationNumber='$Appno';";
 				if(mysqli_query($con,$query))
 				{
 					echo "<b>Updation done successfully.</b>";
-					$query="SELECT * FROM applicant WHERE ApplicationNo='".$Appno."';";
+					$query="SELECT * FROM applicant WHERE ApplicationNumber='".$Appno."';";
 					$res=mysqli_query($con,$query);
 					while($row=mysqli_fetch_array($res,MYSQL_ASSOC))
 					{
 						$Name=$row['Name'];
 						$FatherName=$row['FatherName'];
-						$DateofBirth=$row['DateofBirth'];
+						$DateofBirth=$row['DateOfBirth'];
 						$PermanentAddress=$row['PermanentAddress'];
 						$TemporaryAddress=$row['TemporaryAddress'];
-						$EMailID=$row['EMailID'];
-						$PhoneNo=$row['PhoneNo'];
-						$PANNO=$row['PANNO'];
-						$ApplicationNo=$row['ApplicationNo'];
-						$UserID=$row['UserID'];
+						$EMailID=$row['EmailAddress'];
+						$PhoneNo=$row['PhoneNumber'];
+						$PANNO=$row['PanNumber'];
+						$ApplicationNo=$row['ApplicationNumber'];
+						$UserID=$row['UserId'];
 						$Status=$row['Status'];
-						$query = "INSERT INTO completed_applicants (Name,FatherName,DateofBirth,PermanentAddress,TemporaryAddress,EMailID,PhoneNo,PANNO,ApplicationNo,UserID,Status)VALUES ('$Name','$FatherName','$DateofBirth','$PermanentAddress','$TemporaryAddress','$EMailID','$PhoneNo','$PANNO','$ApplicationNo','$UserID','$Status')";
+						$query = "INSERT INTO completed_applicants (Name,FatherName,DateOfBirth,PermanentAddress,TemporaryAddress,EmailAddress,PhoneNumber,PanNumber,ApplicationNumber,UserId,Status)VALUES ('$Name','$FatherName','$DateofBirth','$PermanentAddress','$TemporaryAddress','$EMailID','$PhoneNo','$PANNO','$ApplicationNo','$UserID','$Status')";
 						if(mysqli_query($con,$query))
 						{
-							$query="DELETE FROM applicant WHERE ApplicationNo='$Appno';";
+							$query="DELETE FROM applicant WHERE ApplicationNumber='$Appno';";
 							mysqli_query($con,$query);
-							$query="DELETE FROM payment WHERE ApplicationNo='$Appno';";
+							$query="DELETE FROM payment WHERE ApplicationNumber='$Appno';";
 							mysqli_query($con,$query);
-							$query="DELETE FROM login_details WHERE UserID='$UserID';";
+							$query="DELETE FROM login_details WHERE UserId='$UserID';";
 							mysqli_query($con,$query);
 						}
 							
