@@ -76,7 +76,7 @@ $_SESSION['userID']=$id;
 $con=mysqli_connect($_SERVER['DB_HOSTNAME'],$_SERVER['DB_USERNAME'],$_SERVER['DB_PASSWORD'],$_SERVER['DB_SCHEMA'],$_SERVER['PORT']);
     if (!$con)
     {
-    die('Could not connect: ' . mysql_error());
+      echo "Error occurred while establishing connection with MySQL database.",mysqli_connect_error();
     }
     
 
