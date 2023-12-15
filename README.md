@@ -6,12 +6,12 @@
 
 ## Table of Contents
 
-- [About](https://github.com/cfts-mkb/pas#about)
-- [Scope](https://github.com/cfts-mkb/pas#scope)
-- [Use Cases Implemented](https://github.com/cfts-mkb/pas#use-cases-implemented)
-- [Actors Involved](https://github.com/cfts-mkb/pas#actors-involved)
-- [Technologies Used](https://github.com/cfts-mkb/pas#technologies-used)
-- [Tools Used](https://github.com/cfts-mkb/pas#tools-used)
+- [About](https://github.com/maheshkumaarbalaji/pas#about)
+- [Scope](https://github.com/maheshkumaarbalaji/pas#scope)
+- [Use Cases Implemented](https://github.com/maheshkumaarbalaji/pas#use-cases-implemented)
+- [Actors Involved](https://github.com/maheshkumaarbalaji/pas#actors-involved)
+- [Technologies Used](https://github.com/maheshkumaarbalaji/pas#technologies-used)
+- [Tools Used](https://github.com/maheshkumaarbalaji/pas#tools-used)
 
 ## About
 
